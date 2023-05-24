@@ -1,7 +1,12 @@
 #pragma once
 
-#include <GameFramework/Actor.h>
 #include <CoreMinimal.h>
+
+#include <Components/StaticMeshComponent.h>
+#include <Engine/StaticMesh.h>
+#include <GameFramework/Actor.h>
+#include <Materials/Material.h>
+#include <Materials/MaterialInstanceDynamic.h>
 #include <UObject/ObjectMacros.h>
 #include <UObject/Object.h>
 

@@ -4,6 +4,8 @@
 #include "rosbridge2cpp/ros_service.h"
 #include "Conversion/Services/BaseRequestConverter.h"
 #include "Conversion/Services/BaseResponseConverter.h"
+#include "Async/TaskGraphInterfaces.h"
+#include "Async/Async.h"
 
 static TMap<FString, UBaseRequestConverter*> RequestConverterMap;
 static TMap<FString, UBaseResponseConverter*> ResponseConverterMap;

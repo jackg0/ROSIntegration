@@ -28,7 +28,7 @@ using json = rapidjson::Document;
 
 
 #pragma warning(disable:4265)
-class TCPConnection : public rosbridge2cpp::ITransportLayer {
+class TCPConnection final : public rosbridge2cpp::ITransportLayer {
 public:
 	TCPConnection() {
 	}

@@ -2,7 +2,8 @@
 
 #include <functional> // std::function
 
-#include <CoreMinimal.h>
+#include "CoreMinimal.h"
+#include "Misc/ConfigCacheIni.h"
 
 //#include Websocket stuff
 #include <SocketSubsystem.h>
@@ -19,7 +20,7 @@ using json = rapidjson::Document;
 #include "IWebSocket.h"
 
 #pragma warning(disable:4265)
-class WebsocketConnection : public rosbridge2cpp::ITransportLayer {
+class WebsocketConnection final : public rosbridge2cpp::ITransportLayer {
 public:
 	WebsocketConnection();	//constructor
 	~WebsocketConnection(); //deconstructor

@@ -2,10 +2,12 @@
 
 #include <iostream>
 
+#include <Containers/Queue.h>
 #include <Tickable.h>
-#include "SpawnableObject.h"
-#include "SpawnObjectMessage.h"
 #include <EngineUtils.h>
+#include <Materials/MaterialInstanceDynamic.h>
+#include <SpawnableObject.h>
+#include <SpawnObjectMessage.h>
 
 #include "SpawnManager.generated.h"
 

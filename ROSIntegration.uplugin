@@ -18,7 +18,8 @@
 		{
 			"Name": "ROSIntegration",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"PlatformAllowList": ["Linux"]
 		}
 	]
 }

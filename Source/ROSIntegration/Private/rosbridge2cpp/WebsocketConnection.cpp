@@ -107,15 +107,10 @@ void WebsocketConnection::OnRawMessage(const void* data, size_t size, size_t byt
 
 void WebsocketConnection::OnMessage(const FString& msg) {
 	json j;
-	try {
-		j.Parse(TCHAR_TO_ANSI(*msg)); //convert to UTF-8 and then reinterpret_cast the pointer to char *
+	j.Parse(TCHAR_TO_ANSI(*msg)); //convert to UTF-8 and then reinterpret_cast the pointer to char *
 
-		if (_incoming_message_callback)
-			_incoming_message_callback(j);
-	}
-	catch (...) {
-		UE_LOG(LogROS, Error, TEXT("Failed to parse JSON - Ignoring message"));
-	}
+	if (_incoming_message_callback)
+		_incoming_message_callback(j);
 }
 
 void WebsocketConnection::RegisterIncomingMessageCallback(std::function<void(json&)> fun)

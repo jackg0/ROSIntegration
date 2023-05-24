@@ -20,6 +20,17 @@ public class ROSIntegration : ModuleRules
 
 	public ROSIntegration(ReadOnlyTargetRules Target) : base(Target)
 	{
+		if (Target.Platform == UnrealTargetPlatform.Android)
+		{
+			return;
+		}
+		
+		if (Target.Platform == UnrealTargetPlatform.LinuxArm64)
+		{
+			return;
+		}
+		
+		
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		string BSONPath = Path.Combine(ThirdPartyPath, "bson");

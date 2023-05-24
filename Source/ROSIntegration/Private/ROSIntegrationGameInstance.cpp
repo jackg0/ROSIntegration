@@ -7,6 +7,8 @@
 #include "ROSBridgeParamOverride.h"
 #include "Kismet/GameplayStatics.h"
 
+#include "TimerManager.h"
+#include "UObject/UObjectIterator.h"
 
 void UROSIntegrationGameInstance::Init()
 {
@@ -14,7 +16,7 @@ void UROSIntegrationGameInstance::Init()
 
 	if (bConnectToROS)
 	{
-		bool resLock = initMutex_.TryLock(); 
+		bool resLock = initMutex_.TryLock();
 		if (!resLock)
 		{
 			UE_LOG(LogROS, Display, TEXT("UROSIntegrationGameInstance::Init() - already connection to ROS bridge!"));
